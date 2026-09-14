@@ -1,0 +1,14 @@
+networkx>=3.2
+openai>=1.40
+python-dotenv>=1.0
+sentence-transformers>=3.0
+pm4py>=2.7
+pdfplumber>=0.11
+python-docx>=1.1
+scipy>=1.12
+scikit-learn>=1.4
+pandas>=2.2
+numpy>=1.26
+jupyter>=1.0
+pytest>=8.0
+tqdm>=4.66
