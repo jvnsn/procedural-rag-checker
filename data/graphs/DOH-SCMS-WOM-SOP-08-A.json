@@ -1,0 +1,19 @@
+{
+  "sop_id": "DOH-SCMS-WOM-SOP-08-A",
+  "title": "Reverse Logistics: Product Recall",
+  "scope_note": "Section 4 (Procedure) steps 4.1-4.9 of SOP-08-A, in DOH Warehouse Operations Manual, 2nd Edition 2022 (data/corpus/DOH_WOM-Manual.pdf, manual pages 151-155 = PDF pages 157-161). This SOP has no contingency section. Step text is the Key Step column verbatim. The two dispatch destinations in 4.5 are modelled as guarded branches, as drawn in the Section 5 flow diagram. Built under docs/annotation-codebook.md: 4.4 and 4.6 follow the branch point rather than the exclusive branches themselves (R3b), since in-stock/already-distributed and supplier/upper-tier are alternatives. Verified against the source document by the author on 2026-09-17; see data/graphs/VERIFICATION.md.",
+  "steps": [
+    {"id": "s1", "text": "Upon receiving the notice for product recall from the FDA and/or supplier, check the inventory of the product with the specific batch/lot/serial number for recall in the inventory", "mandatory": true, "preconditions": [], "condition": null, "src": "4.1"},
+    {"id": "s2", "text": "Pick items from the storage area and segregate to a separate area while waiting for its release", "mandatory": true, "preconditions": ["s1"], "condition": "the item is in the inventory", "src": "4.2"},
+    {"id": "s3", "text": "Notify them to hold further distribution/dispensing and instruct to segregate the item for reverse logistics", "mandatory": true, "preconditions": ["s1"], "condition": "the item with the specific batch/lot/serial number for recall was already distributed to the lower tier (establishments or facilities) under your jurisdiction", "src": "4.3"},
+    {"id": "s4", "text": "Schedule the pick-up with the identified 3PL to the lower tier (establishments or facilities) under your jurisdiction where items with the specific batch/lot/serial number for recall are located", "mandatory": true, "preconditions": ["s3"], "condition": null, "src": "4.3.1"},
+    {"id": "s5", "text": "Upon receiving the items for recall from the lower tier, segregate and store to a separate area while waiting for its release", "mandatory": true, "preconditions": ["s4"], "condition": null, "src": "4.3.2"},
+    {"id": "s6", "text": "Put a label \"Product Recall\" to the stack for proper identification", "mandatory": true, "preconditions": ["s1"], "condition": null, "src": "4.4"},
+    {"id": "s7", "text": "Schedule the dispatch of the product for recall with the supplier", "mandatory": true, "preconditions": ["s6"], "condition": "the item is a direct procurement of your office", "src": "4.5"},
+    {"id": "s8", "text": "Schedule the dispatch of the product for recall with the upper tier (DOH Central or Regional Office)", "mandatory": true, "preconditions": ["s6"], "condition": "the item is allocated by the upper tier (DOH Central or Regional Office)", "src": "4.5"},
+    {"id": "s9", "text": "Prepare the PTR/BL and Gate Pass (indicating the item is for recall)", "mandatory": true, "preconditions": ["s6"], "condition": null, "src": "4.6"},
+    {"id": "s10", "text": "Counter check the documents, quantities and actual item for recall during dispatch process. Ensure that relevant Documents and gate pass are stamped as received by the 3PL", "mandatory": true, "preconditions": ["s9"], "condition": null, "src": "4.7"},
+    {"id": "s11", "text": "Update stock keeping records", "mandatory": true, "preconditions": ["s10"], "condition": null, "src": "4.8"},
+    {"id": "s12", "text": "Consolidate, countercheck and maintain carbon copies of Relevant Documents for filing and review of Supply Officer as necessary", "mandatory": true, "preconditions": ["s11"], "condition": null, "src": "4.9"}
+  ]
+}

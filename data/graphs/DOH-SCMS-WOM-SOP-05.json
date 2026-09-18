@@ -1,0 +1,22 @@
+{
+  "sop_id": "DOH-SCMS-WOM-SOP-05",
+  "title": "Pick and Pack",
+  "scope_note": "Section 4 (Procedure) steps 4.1-4.11 and Section 6 (Contingencies) of SOP-05, in DOH Warehouse Operations Manual, 2nd Edition 2022 (data/corpus/DOH_WOM-Manual.pdf, manual pages 134-137 = PDF pages 140-143). Step text is the Key Step column verbatim. Built under docs/annotation-codebook.md. 4.7 (counter check size/weight) and 4.8 (check assembled shipments) are siblings off assembly (4.6): both inspect the assembled consignment, neither needs the other (R3). Verified against the source document by the author on 2026-09-17; see data/graphs/VERIFICATION.md.",
+  "steps": [
+    {"id": "s1", "text": "Generate Shipping Documents (PTR/BL/RIS) based on approved Allocation List, Shipment Plan and/or Officially Approved Request from Health Programs or Supply Planning Unit. Endorse to Authorized Personnel for signature", "mandatory": true, "preconditions": [], "condition": null, "src": "4.1"},
+    {"id": "s2", "text": "Generate Pick List, based on the Shipment Plan, Approved Allocation List and/or Shipping Documents, following FEFO/FIFO principles. Pick List details shall include information from PO/Contract, DR/SI and location map as follows but not limited to: location code, product name, dosage form and strength (for pharmaceuticals), unit of measure, quantity, batch/lot number, expiry date", "mandatory": true, "preconditions": ["s1"], "condition": null, "src": "4.2"},
+    {"id": "s3", "text": "Perform Contingency Step 6.1: instruct Warehouse staff to correct invalid data entry in the location map and inventory (if there are any) and update accordingly", "mandatory": true, "preconditions": ["s2"], "condition": "reference documents are not updated", "src": "4.2, 6.1"},
+    {"id": "s4", "text": "Endorse pick list and shipment plan to store supervisor and store keeper", "mandatory": true, "preconditions": ["s2"], "condition": null, "src": "4.3"},
+    {"id": "s5", "text": "Pick items in the pick list: proceed to the storage location of the first product on the Pick List and pick the products with the exact details as stated on the Pick List using appropriate picking tool/equipment", "mandatory": true, "preconditions": ["s4"], "condition": null, "src": "4.4"},
+    {"id": "s6", "text": "Perform Contingency Step 6.2: perform physical inspection of the warehouse to locate products; if products are located, update the documents accordingly; if there are missing quantity or damaged items, report to Store Manager and produce Incident Report (Annex 16) and inform the Supply Officer", "mandatory": true, "preconditions": ["s5"], "condition": "the item stated on the Pick list is not present in the specified storage location", "src": "4.4, 6.2"},
+    {"id": "s7", "text": "Place the products in the designated area", "mandatory": true, "preconditions": ["s5"], "condition": null, "src": "4.5"},
+    {"id": "s8", "text": "Perform Contingency Step 6.3: if picking and packing area is congested, facilitate transfer of stocks to a tentative vacant area in the warehouse to be used for assembling of items", "mandatory": true, "preconditions": ["s7"], "condition": "the designated area for picking and packing is not available", "src": "4.5, 6.3"},
+    {"id": "s9", "text": "Assemble the health commodities per facility according to the pick list", "mandatory": true, "preconditions": ["s7"], "condition": null, "src": "4.6"},
+    {"id": "s10", "text": "Counter check the size and/or weight of consignment", "mandatory": true, "preconditions": ["s9"], "condition": null, "src": "4.7"},
+    {"id": "s11", "text": "Check assembled shipments", "mandatory": true, "preconditions": ["s9"], "condition": null, "src": "4.8"},
+    {"id": "s12", "text": "Perform Contingency Step 6.4: instruct the Store helper/keeper to correct the discrepancy: return excess or add deficient items if there are any", "mandatory": true, "preconditions": ["s11"], "condition": "there are discrepancies in the assembled shipments", "src": "4.8, 6.4"},
+    {"id": "s13", "text": "Update Bin Card", "mandatory": true, "preconditions": ["s11"], "condition": null, "src": "4.9"},
+    {"id": "s14", "text": "Update Location map", "mandatory": true, "preconditions": ["s11"], "condition": null, "src": "4.10"},
+    {"id": "s15", "text": "Countercheck and sign Shipping Documents and inform recipient/official courier for pick-up", "mandatory": true, "preconditions": ["s13", "s14"], "condition": null, "src": "4.11"}
+  ]
+}

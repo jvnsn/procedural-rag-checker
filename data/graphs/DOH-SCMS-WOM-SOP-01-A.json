@@ -1,0 +1,18 @@
+{
+  "sop_id": "DOH-SCMS-WOM-SOP-01-A",
+  "title": "Preparation for Delivery from Supplier",
+  "scope_note": "Section 4 (Procedure) steps 4.1-4.9 and Section 6 (Contingency Steps) of SOP-01-A, in DOH Warehouse Operations Manual, 2nd Edition 2022 (data/corpus/DOH_WOM-Manual.pdf, manual pages 89-93 = PDF pages 95-99). Step text is the Key Step column verbatim. Section 3 (Responsibility), 5 (Process Flow Diagram) and 7 (Documentation and Attachments) are not steps. Built under docs/annotation-codebook.md. 4.7 (inform) and 4.8 (send) are siblings off 4.6: both need the approved schedule, neither needs the other (R3). Verified against the source document by the author on 2026-09-17; see data/graphs/VERIFICATION.md.",
+  "steps": [
+    {"id": "s1", "text": "Receive Request for Schedule of Delivery (RSD) from suppliers filled-up via manual process, email, or via the electronic logistics management information system (eLMIS) if available", "mandatory": true, "preconditions": [], "condition": null, "src": "4.1"},
+    {"id": "s2", "text": "Verify completeness of information of RSD including required documentations (as necessary)", "mandatory": true, "preconditions": ["s1"], "condition": null, "src": "4.2"},
+    {"id": "s3", "text": "Reject request and perform contingency step 6.1: fill out the Non-conformance Report (Annex 3), have the requesting personnel co-sign the form, provide a copy to the requesting party before departure and instruct to request for a new schedule of delivery", "mandatory": true, "preconditions": ["s2"], "condition": "the delivery documents are incomplete or inappropriate", "src": "4.2, 6.1"},
+    {"id": "s4", "text": "Collate all RSDs for review of the Supply Officer", "mandatory": true, "preconditions": ["s2"], "condition": "the delivery documents are complete and appropriate", "src": "4.3"},
+    {"id": "s5", "text": "Review and classify RSDs based on the following: Space Availability, Notice to Proceed, Urgency", "mandatory": true, "preconditions": ["s4"], "condition": null, "src": "4.4"},
+    {"id": "s6", "text": "Plan Schedules of Deliveries", "mandatory": true, "preconditions": ["s5"], "condition": null, "src": "4.5"},
+    {"id": "s7", "text": "Perform contingency step 6.2: requests for deliveries which cannot be accommodated shall be re-scheduled accordingly", "mandatory": true, "preconditions": ["s5"], "condition": "the requested delivery cannot be accommodated", "src": "4.5, 6.2"},
+    {"id": "s8", "text": "Approve Requests for Deliveries and generate the Approved RSD form specifying the date and time of delivery of suppliers", "mandatory": true, "preconditions": ["s6"], "condition": null, "src": "4.6"},
+    {"id": "s9", "text": "Inform Supplier, Donor, Store Manager and Inspection Committee of the Approved Schedule/s of delivery", "mandatory": true, "preconditions": ["s8"], "condition": null, "src": "4.7"},
+    {"id": "s10", "text": "Send Schedules of Delivery, Request for Inspection to Store managers and Inspection Committee", "mandatory": true, "preconditions": ["s8"], "condition": null, "src": "4.8"},
+    {"id": "s11", "text": "Prepare the warehouse and staff for the upcoming delivery", "mandatory": true, "preconditions": ["s10"], "condition": null, "src": "4.9"}
+  ]
+}

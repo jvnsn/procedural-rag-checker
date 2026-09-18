@@ -1,0 +1,17 @@
+{
+  "sop_id": "DOH-SCMS-WOM-SOP-08-C",
+  "title": "Reverse Logistics: Releasing Items for Redistribution",
+  "scope_note": "Section 4 (Procedure) steps 4.1-4.10 of SOP-08-C, in DOH Warehouse Operations Manual, 2nd Edition 2022 (data/corpus/DOH_WOM-Manual.pdf, manual pages 163-166 = PDF pages 169-172). This SOP has no contingency section. Step text is the Key Step column verbatim. Verified against the source document by the author on 2026-09-17; see data/graphs/VERIFICATION.md.",
+  "steps": [
+    {"id": "s1", "text": "Upon receiving the notice for reverse logistics from the health program or supply planning unit, check the inventory of the product with the specific batch/lot/serial number and quantity requested for reverse logistics", "mandatory": true, "preconditions": [], "condition": null, "src": "4.1"},
+    {"id": "s2", "text": "Coordinate with the health program/supply planning unit", "mandatory": true, "preconditions": ["s1"], "condition": "the item with the specific batch/lot/serial number and quantity for reverse logistics is not available and distributed already", "src": "4.2"},
+    {"id": "s3", "text": "Generate pick list based on the request from the health program or supply planning unit", "mandatory": true, "preconditions": ["s1"], "condition": "the item is in the inventory", "src": "4.3"},
+    {"id": "s4", "text": "Pick items from the storage area and segregate to a separate area while waiting for its release", "mandatory": true, "preconditions": ["s3"], "condition": null, "src": "4.4"},
+    {"id": "s5", "text": "Put a label to the stack for proper identification", "mandatory": true, "preconditions": ["s4"], "condition": null, "src": "4.5"},
+    {"id": "s6", "text": "Schedule the dispatch of the product with: 1) the upper tier's 3PL (DOH Central or Regional Office) requesting for reverse logistics, or 2) your own 3PL or in-house transport services, if available", "mandatory": true, "preconditions": ["s5"], "condition": null, "src": "4.6"},
+    {"id": "s7", "text": "Prepare the PTR/BL and Gate Pass (indicating the item is for reverse logistics)", "mandatory": true, "preconditions": ["s6"], "condition": null, "src": "4.7"},
+    {"id": "s8", "text": "Counter check the documents, quantities and actual item during dispatch process. Ensure that relevant Documents and gate pass are stamped as received by the 3PL/in-house transport service", "mandatory": true, "preconditions": ["s7"], "condition": null, "src": "4.8"},
+    {"id": "s9", "text": "Update stock keeping records", "mandatory": true, "preconditions": ["s8"], "condition": null, "src": "4.9"},
+    {"id": "s10", "text": "Consolidate, countercheck and maintain carbon copies of Relevant Documents for filing and review of Supply Officer as necessary", "mandatory": true, "preconditions": ["s9"], "condition": null, "src": "4.10"}
+  ]
+}

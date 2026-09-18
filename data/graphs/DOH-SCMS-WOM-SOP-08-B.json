@@ -1,0 +1,18 @@
+{
+  "sop_id": "DOH-SCMS-WOM-SOP-08-B",
+  "title": "Reverse Logistics: Pulling Items from Lower Tiers for Redistribution",
+  "scope_note": "Section 4 (Procedure) steps 4.1-4.11 of SOP-08-B, in DOH Warehouse Operations Manual, 2nd Edition 2022 (data/corpus/DOH_WOM-Manual.pdf, manual pages 157-161 = PDF pages 163-167). This SOP has no contingency section, and its numbering skips 4.6 in the manual. Step text is the Key Step column verbatim; the 'continue monitoring' branch is taken from the Section 5 flow diagram. Verified against the source document by the author on 2026-09-17; see data/graphs/VERIFICATION.md.",
+  "steps": [
+    {"id": "s1", "text": "Check stock status of warehouses and/or health facilities under your office's jurisdiction through stock data analysis", "mandatory": true, "preconditions": [], "condition": null, "src": "4.1"},
+    {"id": "s2", "text": "Continue monitoring", "mandatory": true, "preconditions": ["s1"], "condition": "stock re-alignment is not necessary", "src": "5 (flow diagram)"},
+    {"id": "s3", "text": "Notify health programs and/or supply planning unit and seek approval on stock re-alignment/re-allocation", "mandatory": true, "preconditions": ["s1"], "condition": "stock realignment is necessary to balance stock status across warehouses and/or facilities under your office's jurisdiction", "src": "4.2"},
+    {"id": "s4", "text": "Upon receiving the approved stock re-allocation or notice for reverse logistics of items that need stock realignment, send notification (via email or eLMIS) to lower tiers and inform them on items that will be pulled out from their warehouses and/or health facilities for redistribution to other facilities with the following information but not limited to: item description, batch/lot number, expiration date, unit of measure, quantity, volume in CBM or Liters, estimated date and time of pick up", "mandatory": true, "preconditions": ["s3"], "condition": null, "src": "4.3"},
+    {"id": "s5", "text": "Instruct 3PL or in-house transport services to pick up items from the warehouses and/or health facilities specified in the notice for product reverse logistics/stock re-alignment order", "mandatory": true, "preconditions": ["s4"], "condition": null, "src": "4.4"},
+    {"id": "s6", "text": "When the items arrived in the warehouse, perform routine warehouse activities (receiving, put-away, storage)", "mandatory": true, "preconditions": ["s5"], "condition": null, "src": "4.5"},
+    {"id": "s7", "text": "When all items are complete, perform routine preparation and dispatch process to the new recipient(s) of items based on the stock re-alignment order and/or allocation list", "mandatory": true, "preconditions": ["s6"], "condition": null, "src": "4.7"},
+    {"id": "s8", "text": "Prepare shipping documents", "mandatory": true, "preconditions": ["s7"], "condition": null, "src": "4.8"},
+    {"id": "s9", "text": "Counter check the shipping documents, quantities and actual item during dispatch process. Ensure that relevant Documents and gate pass are stamped as received by the 3PL or in-house transport services", "mandatory": true, "preconditions": ["s8"], "condition": null, "src": "4.9"},
+    {"id": "s10", "text": "Update stock keeping records", "mandatory": true, "preconditions": ["s9"], "condition": null, "src": "4.10"},
+    {"id": "s11", "text": "Consolidate, countercheck and maintain carbon copies of Relevant Documents for filing and review of Supply Officer as necessary", "mandatory": true, "preconditions": ["s10"], "condition": null, "src": "4.11"}
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "sop_id": "DOH-SCMS-WOM-SOP-01-B",
+  "title": "Preparation for Delivery from Upper Tiers",
+  "scope_note": "Section 4 (Procedure) steps 4.1-4.5 and Section 6 (Contingency Steps) of SOP-01-B, in DOH Warehouse Operations Manual, 2nd Edition 2022 (data/corpus/DOH_WOM-Manual.pdf, manual pages 94-96 = PDF pages 100-102). Step text is the Key Step column verbatim. Verified against the source document by the author on 2026-09-17; see data/graphs/VERIFICATION.md.",
+  "steps": [
+    {"id": "s1", "text": "Receive Delivery Notification Form (DNF) from the DOH Central Office or DOH Regional Office", "mandatory": true, "preconditions": [], "condition": null, "src": "4.1"},
+    {"id": "s2", "text": "Verify completeness of information of DNF", "mandatory": true, "preconditions": ["s1"], "condition": null, "src": "4.2"},
+    {"id": "s3", "text": "Perform contingency step 6.1: coordinate with the consignor pertaining any discrepancy or incomplete information on the delivery notification form", "mandatory": true, "preconditions": ["s2"], "condition": "the information is incomplete or inappropriate", "src": "4.2, 6.1"},
+    {"id": "s4", "text": "Review and classify Delivery Notification based on the following: Urgency, Space Availability", "mandatory": true, "preconditions": ["s2"], "condition": "the information is complete and appropriate", "src": "4.3"},
+    {"id": "s5", "text": "Perform contingency step 6.2: coordinate with the consignor on the preferred date(s) of delivery based on your schedule of transactions, availability of space and staff; if delivery request shall be re-scheduled, indicate the reason accordingly", "mandatory": true, "preconditions": ["s4"], "condition": "the delivery request cannot be accommodated", "src": "4.3, 6.2"},
+    {"id": "s6", "text": "Approve requests for deliveries specifying the date and time of delivery", "mandatory": true, "preconditions": ["s4"], "condition": "the delivery request can be accommodated", "src": "4.4"},
+    {"id": "s7", "text": "Prepare the warehouse and staff for the upcoming delivery", "mandatory": true, "preconditions": ["s6"], "condition": null, "src": "4.5"}
+  ]
+}
